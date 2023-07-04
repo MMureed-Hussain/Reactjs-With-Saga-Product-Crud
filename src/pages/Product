@@ -1,0 +1,103 @@
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  createProductStart,
+  updateProductStart,
+  deleteProductStart,
+  readProductStart,
+} from '../model/actions/productActions';
+import { useEffect, useState } from 'react';
+
+//form start json server
+//npx json-server --watch db.json --port 8000
+
+const ProductCrud = () => {
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.product.data);
+  const loading = useSelector((state) => state.product.loading);
+  const error = useSelector((state) => state.product.error);
+
+  // State for the product form
+  const [productName, setProductName] = useState('');
+  const [productPrice, setProductPrice] = useState('');
+
+  useEffect(() => {
+    // Fetch initial product data
+    // dispatch(readStart());
+    dispatch(readProductStart());
+  }, [dispatch]);
+
+  const handleCreateProduct = () => {
+    const newProduct = {
+      name: productName,
+      price: productPrice,
+    };
+
+    dispatch(createProductStart(newProduct));
+
+    // Clear form inputs
+    setProductName('');
+    setProductPrice('');
+  };
+
+  const handleUpdateProduct = (productId) => {
+    const updatedProduct = {
+      id: productId,
+      name: productName,
+      price: productPrice,
+    };
+
+    dispatch(updateProductStart(updatedProduct));
+
+    // Clear form inputs
+    setProductName('');
+    setProductPrice('');
+  };
+
+  const handleDeleteProduct = (productId) => {
+    dispatch(deleteProductStart(productId));
+  };
+
+  return (
+    <div>
+      <h1>Product CRUD Component</h1>
+      {loading ? (
+        <p>Loading...</p>
+      ) : error ? (
+        <p>Error: {error}</p>
+      ) : (
+        <div>
+          <h2>Product List</h2>
+          <ul>
+            {products.map((product) => (
+              <li key={product.id}>
+                {product.name} - {product.price}
+                <button 
+                onClick={() => handleDeleteProduct(product.id)}>
+                  Delete
+                </button>
+              </li>
+            ))}
+          </ul>
+
+          <h2>Create / Update Product</h2>
+          <input
+            type="text"
+            placeholder="Product Name"
+            value={productName}
+            onChange={(e) => setProductName(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Product Price"
+            value={productPrice}
+            onChange={(e) => setProductPrice(e.target.value)}
+          />
+          <button onClick={handleCreateProduct}>Create</button>
+          {/* <button onClick={() => handleUpdateProduct(productId)}>Update</button> */}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ProductCrud;
