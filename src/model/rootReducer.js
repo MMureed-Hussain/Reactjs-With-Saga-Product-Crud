@@ -7,6 +7,7 @@ import crateProductReducer from './reducers/crateProductReducer';
 import getProductReducer from './reducers/getProductReducer';
 import updateProductReducer from './reducers/updateProductReducer';
 import deleteProductReducer from './reducers/deleteProductReducer';
+import productDetailsReducer from './reducers/productDetailsReducer';
 
 const rootReducer = combineReducers({
   registration: registrationReducer,
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
   product:crateProductReducer,
   products:getProductReducer,
   product:updateProductReducer,
-  product:deleteProductReducer
+  product:deleteProductReducer,
+  product:productDetailsReducer
 });
 
 export default rootReducer;

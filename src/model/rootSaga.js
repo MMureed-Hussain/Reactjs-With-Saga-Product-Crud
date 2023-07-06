@@ -7,6 +7,7 @@ import { watchCreateProduct} from './sagas/createProductSaga';
 import { watchGetProduct } from './sagas/getProductSaga';
 import { watchUpdateProduct } from './sagas/updateProductSaga';
 import {watchDeleteProduct} from './sagas/deleteProductSaga';
+import productDetailsSaga from './sagas/detailsProductSaga';
 
 export default function* rootSaga() {
   yield all([
@@ -16,6 +17,7 @@ export default function* rootSaga() {
     watchGetProduct(),
     watchUpdateProduct(),
     watchDeleteProduct(),
+    productDetailsSaga()
 
     // Add other sagas here if needed
   ]);

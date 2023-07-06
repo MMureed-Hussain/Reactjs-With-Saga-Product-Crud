@@ -1,38 +1,28 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Slider from "../components/layout/Slider";
+import Body from "../components/Body";
+import { Col, Row } from "react-bootstrap";
 
 const Home = () => {
   return (
-    <div className="container mt-5  ">
-      <div id="productSlider" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src="/images/slider1.jpg" className="d-block w-100" alt="Product 1" />
-            <div className="carousel-caption">
-              <h5>Buildings</h5>
-              <p>Description of Buildings</p>
-            </div>
+    <>
+      <Row className="d-flex align-items-stretch g-0">
+        <Col md={8}>
+          <Slider />
+        </Col>
+        <Col md={4} className="d-flex flex-column">
+          <div className="flex-grow-1">
+            <Slider />
           </div>
-          <div className="carousel-item">
-            <img src="/images/slider2.jpg" className="d-block w-100" alt="Product 2" />
-            <div className="carousel-caption">
-              <h5>Beach</h5>
-              <p>Description of Beach House</p>
-            </div>
-          </div>
-          {/* Add more carousel items as needed */}
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#productSlider" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#productSlider" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
+        </Col>
+      </Row>
+      <div className=" m-3">
       </div>
-    </div>
+      <Body />
+
+    </>
   );
-}
+};
 
 export default Home;
