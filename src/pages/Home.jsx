@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Slider from "../components/layout/Slider";
-import Body from "../components/Body";
 import { Col, Row } from "react-bootstrap";
+import Main from "../components/Main"
 
 const Home = () => {
   return (
@@ -19,7 +19,7 @@ const Home = () => {
       </Row>
       <div className=" m-3">
       </div>
-      <Body />
+      <Main />
 
     </>
   );

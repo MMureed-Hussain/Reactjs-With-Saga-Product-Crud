@@ -14,8 +14,8 @@ const Body = () => {
                 </p>
                 <Button variant="primary">Get Started</Button>
               </Col>
-              <Col md={6} className="hero-image">
-                <img src="/images/hero-image.jpg" alt="Hero" />
+              <Col md={2} className="hero-image">
+                <img src="/images/okay.png" alt="Hero" />
               </Col>
             </Row>
             <Row className="features-section">
