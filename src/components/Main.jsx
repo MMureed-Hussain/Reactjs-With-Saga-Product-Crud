@@ -21,7 +21,7 @@ const Main = () => {
   ];
 
   return (
-    <Row>
+    <Row className='g-0'>
       {imageList.map((image, index) => (
         <Col key={index} sm={6} md={4} lg={2} className="d-flex flex-column align-items-center">
           <div className="d-flex flex-column align-items-center">
