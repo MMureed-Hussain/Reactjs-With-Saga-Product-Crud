@@ -4,6 +4,7 @@ import Slider from "../components/layout/Slider";
 import { Col, Row } from "react-bootstrap";
 import Main from "../components/Main";
 import Categories from "../components/Categories"
+import Trending from "../components/Trending"
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <div className=" m-3"></div>
       <Main />
       <Categories />
+      <Trending />
     </>
   );
 };
