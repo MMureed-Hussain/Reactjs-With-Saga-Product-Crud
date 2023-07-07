@@ -2,7 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Slider from "../components/layout/Slider";
 import { Col, Row } from "react-bootstrap";
-import Main from "../components/Main"
+import Main from "../components/Main";
+import Categories from "../components/Categories"
 
 const Home = () => {
   return (
@@ -17,10 +18,9 @@ const Home = () => {
           </div>
         </Col>
       </Row>
-      <div className=" m-3">
-      </div>
+      <div className=" m-3"></div>
       <Main />
-
+      <Categories />
     </>
   );
 };
