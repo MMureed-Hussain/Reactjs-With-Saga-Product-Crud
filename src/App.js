@@ -11,6 +11,14 @@ import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
 
+// const isAuthenticated = () => {
+//   const token = localStorage.getItem('token');
+//   return token !== null;
+// };
+// <Route exact path="/">
+//   {isAuthenticated() ? <Redirect to="/home" /> : <Landing />}
+// </Route>
+
 const App = () => {
   // Check if token exists in local storage
   const token = localStorage.getItem('token');

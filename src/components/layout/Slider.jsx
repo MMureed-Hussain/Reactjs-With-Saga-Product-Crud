@@ -12,26 +12,26 @@ const Slider = () => {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img
-                src="/images/slider1.jpg"
+                src="/images/s1.webp"
                 className="d-block w-100"
                 alt="Product 1"
                 height="240px"
               />
               <div className="carousel-caption">
-                <h5>Buildings</h5>
-                <p>Description of Buildings</p>
+                <h3 className=''>Brands</h3>
+                <p>Presents a female model and your task is to make her a real fashion diva!</p>
               </div>
             </div>
             <div className="carousel-item">
               <img
-                src="/images/slider2.jpg"
+                src="/images/s2.webp"
                 className="d-block w-100"
                 alt="Product 2"
                 height="240px"
               />
               <div className="carousel-caption">
-                <h5>Beach</h5>
-                <p>Description of Beach House</p>
+                <h3>Awesome</h3>
+                <p>Fashionable Kurti latest design</p>
               </div>
             </div>
             {/* Add more carousel items as needed */}

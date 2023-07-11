@@ -2,16 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Sidebar() {
-  const linkStyles = {
-    color: "#333", // Custom color for links
-    fontFamily: "Arial, sans-serif", // Custom font family
-    fontSize: "16px", // Custom font size
-    textDecoration: "none", // Remove underline
-  };
-
-  const hoverStyles = {
-    color: "#007bff", // Change link color on hover
-  };
   return (
     <>
       {/* Sidebar (Mobile View) */}
@@ -59,6 +49,7 @@ function Sidebar() {
       </div>
 
       {/* Sidebar (Desktop View) */}
+
       <div className="d-none d-md-block bg-light mt-5 vh-100">
         <img className="m-2" src="#" alt="#" />{" "}
         <a className="navbar-brand m-4" href="#">
@@ -67,10 +58,7 @@ function Sidebar() {
         <div className="sidebar m-3 ">
           <ul className="nav flex-column">
             <li className="nav-item">
-              <Link
-                className="nav-link custom-link"
-                to="/"
-              >
+              <Link className="nav-link custom-link" to="/">
                 Home
               </Link>
             </li>
