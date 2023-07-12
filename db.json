@@ -1,11 +1,6 @@
 {
   "todo": [
     {
-      "id": 1,
-      "name": "Mobile",
-      "price": "555"
-    },
-    {
       "id": 2,
       "name": "HeadPhone",
       "price": "888"

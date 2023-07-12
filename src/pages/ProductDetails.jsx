@@ -17,15 +17,15 @@ const ProductDetails = () => {
 
   return (
     <>
-      <div className=" d-flex align-items-center justify-content-center vh-100 m-2 bg-success"> 
+      <div className=" d-flex align-items-center justify-content-center vh-100 m-2"> 
         {loading ? (
           <p>Loading...</p>
         ) : error ? (
           <p>Error: {error}</p>
         ) : product ? (
-          <div className="card width:25rem">
-           <b>Name</b>{" "}<div className="card-body text-primary" >{product.name}</div>{" "}
-            <b>Price</b>{" "}<div className="card-body text-primary">{product.price}</div>
+          <div className="card bg-success">
+           <div className="card-body text-light fs-5"><b className="text-dark fs-3">Name</b>{":- "}{product.name}</div>{" "}
+            <div className="card-body text-light fs-5"><b className="text-dark fs-3">Price</b>{":- "}{product.price}</div>
             {/* Render other details */}
           </div>
         ) : (
