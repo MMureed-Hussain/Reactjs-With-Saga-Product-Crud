@@ -13,6 +13,8 @@ import ProductDetails from './pages/ProductDetails';
 import Contact from './pages/Contact';
 import Trending from './components/Trending';
 import Categories from './components/Categories';
+import TrendingDetails from './pages/TrendingDetails';
+import CategoriesDetails from './pages/CategoriesDetails';
 
 // const isAuthenticated = () => {
 //   const token = localStorage.getItem('token');
@@ -45,7 +47,9 @@ const App = () => {
               <Route exact path="/products" element={<Products />} />
               <Route exact path="/products/:id" element={<ProductDetails />} />
               <Route exact path="/categories" element={<Categories/>} />
+              <Route exact path="/categoriesdetails/:id" element={<CategoriesDetails/>} />
               <Route exact path="/trending" element={<Trending/>} />
+              <Route exact path="/trendingdetails/:id" element={<TrendingDetails/>} />
               <Route exact path="/contact" element={<Contact />} />
               <Route exact path="/no-page" element={<NoPage />} />
               <Route path="*" element={<Navigate to="/no-page" />} />

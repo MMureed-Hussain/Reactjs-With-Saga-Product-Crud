@@ -6,10 +6,10 @@ function Sidebar() {
     <>
       {/* Sidebar (Mobile View) */}
       <div className="d-md-none">
-        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-          <a className="navbar-brand" href="#">
+        <nav className="navbar navbar-expand-md navbar-dark bg-dark fs-5">
+          <Link className="navbar-brand" to="/">
             <span className="fs-2">Logo</span>
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -52,14 +52,12 @@ function Sidebar() {
           </div>
         </nav>
       </div>
-
       {/* Sidebar (Desktop View) */}
-
-      <div className="d-none d-md-block bg-light mt-5 vh-100">
+      <div className="d-none d-md-block bg-light mt-5 vh-100 fs-5">
         <img className="m-2" src="#" alt="#" />{" "}
-        <a className="navbar-brand m-4" href="#">
+        <Link className="navbar-brand m-4" to="/">
           <span className="fs-2">Logo</span>
-        </a>
+        </Link>
         <div className="sidebar m-3 ">
           <ul className="nav flex-column">
             <li className="nav-item">

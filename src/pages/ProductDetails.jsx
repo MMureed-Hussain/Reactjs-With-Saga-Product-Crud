@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProductRequest } from "../model/actions/productDetailsAction";
 import { useParams } from "react-router-dom";
-import { Card, Grid, Row, Col, Spinner } from "react-bootstrap";
+// import { Card, Grid, Row, Col, Spinner } from "react-bootstrap";
 
 // import { fetchProductRequest } from "../actions/productActions";
 
