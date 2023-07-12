@@ -34,14 +34,19 @@ function Sidebar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Services
-                </a>
+                <Link className="nav-link custom-link" to="/categories">
+                  Categories
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link custom-link" to="/trending">
+                  Trending
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/contact">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -68,12 +73,17 @@ function Sidebar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link custom-link" to="#">
-                Services
+              <Link className="nav-link custom-link" to="/categories">
+                Categories
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link custom-link" to="#">
+              <Link className="nav-link custom-link" to="/trending">
+                Trending
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link custom-link" to="contact">
                 Contact
               </Link>
             </li>

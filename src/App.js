@@ -10,6 +10,9 @@ import Products from './pages/Products';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
+import Contact from './pages/Contact';
+import Trending from './components/Trending';
+import Categories from './components/Categories';
 
 // const isAuthenticated = () => {
 //   const token = localStorage.getItem('token');
@@ -41,6 +44,9 @@ const App = () => {
               <Route index element={<Home />} />
               <Route exact path="/products" element={<Products />} />
               <Route exact path="/products/:id" element={<ProductDetails />} />
+              <Route exact path="/categories" element={<Categories/>} />
+              <Route exact path="/trending" element={<Trending/>} />
+              <Route exact path="/contact" element={<Contact />} />
               <Route exact path="/no-page" element={<NoPage />} />
               <Route path="*" element={<Navigate to="/no-page" />} />
             </Routes>
