@@ -8,7 +8,7 @@ function Sidebar() {
       <div className="d-md-none">
         <nav className="navbar navbar-expand-md navbar-dark bg-dark">
           <a className="navbar-brand" href="#">
-            Sidebar
+            <span className="fs-2">Logo</span>
           </a>
           <button
             className="navbar-toggler"
@@ -53,7 +53,7 @@ function Sidebar() {
       <div className="d-none d-md-block bg-light mt-5 vh-100">
         <img className="m-2" src="#" alt="#" />{" "}
         <a className="navbar-brand m-4" href="#">
-          Sidebar
+          <span className="fs-2">Logo</span>
         </a>
         <div className="sidebar m-3 ">
           <ul className="nav flex-column">

@@ -18,8 +18,8 @@ const Slider = () => {
                 height="240px"
               />
               <div className="carousel-caption">
-                <h3 className=''>Brands</h3>
-                <p>Presents a female model and your task is to make her a real fashion diva!</p>
+                <h3 className='text-dark'>Brands</h3>
+                <p className='text-dark'>Presents a female model and your task is to make her a real fashion diva!</p>
               </div>
             </div>
             <div className="carousel-item">

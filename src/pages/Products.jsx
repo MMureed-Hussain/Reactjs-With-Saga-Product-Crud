@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -126,7 +125,7 @@ const Products = () => {
               onChange={handleSearch}
             />
             <div className="table-responsive">
-              <table className="table table-bordered">
+              <table className="table table-bordered text-center fs-5">
                 <thead>
                   <tr>
                     <th>Name</th>
@@ -140,7 +139,7 @@ const Products = () => {
                       <td>{product?.name}</td>
                       <td>{product?.price}</td>
                       <td>
-                        <div className="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <div className="d-grid gap-2 d-md-flex justify-content-md-center">
                           <button
                             className="btn btn-primary me-md-1 mb-2"
                             onClick={() => handleUpdateProduct(product?.id)}

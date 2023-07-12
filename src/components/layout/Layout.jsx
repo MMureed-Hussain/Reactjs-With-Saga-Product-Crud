@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import Sidebar from "../Sidebar";
 import Navbar from "../Navbar";
 import Header from "./Header";
-
+import Help from "../Help";
 export default function Layout({ children }) {
   const location = useLocation();
   const is404Page = location.pathname === "/404";
@@ -17,6 +17,7 @@ export default function Layout({ children }) {
             <Sidebar />
           </div>
           <div className="col-10">{children}</div>
+          <Help/>
         </div>
     </>
   );
