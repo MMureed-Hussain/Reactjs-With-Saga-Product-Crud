@@ -12,7 +12,7 @@ const Slider = () => {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img
-                src="/images/s1.webp"
+                src="/images/s4.jpg"
                 className="d-block w-100"
                 alt="Product 1"
                 height="240px"

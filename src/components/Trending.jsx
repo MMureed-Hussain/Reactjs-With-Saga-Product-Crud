@@ -32,7 +32,7 @@ const Trending = () => {
   return (
     <div className="trending-page">
       <Container>
-        <h2 className="text-center">Trending Products</h2>
+        <h2 className="text-center">Trending</h2>
         <Row className="g-4">
           {trendingList.map((product, index) => (
             <Col key={index} md={6} lg={3}>

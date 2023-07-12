@@ -4,22 +4,22 @@ import { Col, Row, Button } from 'react-bootstrap';
 const Categories = () => {
   const categoryList = [
     {
-      image: '/images/woman.jpg',
+      image: '/images/c7.webp',
       name: 'Woman',
       buttonText: 'Explore Now',
     },
     {
-      image: '/images/man.jpg',
+      image: '/images/c3.webp',
       name: 'Man',
       buttonText: 'Explore Now',
     },
     {
-      image: '/images/female.jpg',
+      image: '/images/c5.webp',
       name: 'Sales',
       buttonText: 'Explore Now',
     },
     {
-      image: '/images/brand.jpg',
+      image: '/images/c4.webp',
       name: 'Brands',
       buttonText: 'Explore Now',
     },
