@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Col, Container, Row, Card, Button, Modal } from "react-bootstrap";
 
-const Trending = () => {
-
-  const trendingList = [
+export const CategryWoman = () => {
+  const womanList = [
     {
       id: 1,
       image: "/images/t1.jpeg",
@@ -36,37 +35,38 @@ const Trending = () => {
 
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  const handleDetailsProduct = (trendingId) => {
-    const trending = trendingList.find((trending) => trending.id === trendingId);
-    setSelectedProduct(trending);
+  const handleWoman = (womanId) => {
+    const woman = womanList.find(
+      (woman) => woman.id === womanId
+    );
+    setSelectedProduct(woman);
   };
 
   const handleCloseModal = () => {
     setSelectedProduct(null);
   };
-
   return (
     <>
       <div className="trending-page mt-5">
         <Container>
-          <h1 className="card text-center bg-success">Trending Products</h1>
+          <h1 className="card text-center bg-success">Wonam Products</h1>
           <Row className="g-4">
-            {trendingList.map((trending, index) => (
+            {womanList.map((woman, index) => (
               <Col key={index} md={6} lg={3}>
                 <Card className="h-100">
                   <Card.Img
                     variant="top"
-                    src={trending.image}
+                    src={woman.image}
                     alt={`Product ${index + 1}`}
                   />
                   <Card.Body>
-                    <Card.Title>{trending.price}</Card.Title>
-                    <Card.Text>{trending.description}</Card.Text>
+                    <Card.Title>{woman.price}</Card.Title>
+                    <Card.Text>{woman.description}</Card.Text>
                     <Button
                       variant="primary"
-                      onClick={() => handleDetailsProduct(trending.id)}
+                      onClick={() => handleWoman(woman.id)}
                     >
-                      {trending.buttonText}
+                      {woman.buttonText}
                     </Button>
                   </Card.Body>
                 </Card>
@@ -103,6 +103,3 @@ const Trending = () => {
     </>
   );
 };
-
-export default Trending;
-

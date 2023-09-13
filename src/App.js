@@ -1,20 +1,21 @@
 import React from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
-import Registration from './auth/Registration';
-import Login from './auth/Login';
-import LandingPage from './pages/LandingPage';
-import NoPage from './pages/NoPage';
-import Products from './pages/Products';
-import Layout from './components/layout/Layout';
-import Home from './pages/Home';
-import ProductDetails from './pages/ProductDetails';
-import Contact from './pages/Contact';
-import Trending from './components/Trending';
-import Categories from './components/Categories';
+// import CategoryWoman from './pages/CategryWoman';
+import { CategryWoman } from './category/CategryWoman';
 import TrendingDetails from './pages/TrendingDetails';
-import CategoriesDetails from './pages/CategoriesDetails';
+import ProductDetails from './pages/ProductDetails';
+import Categories from './components/Categories';
+import Layout from './components/layout/Layout';
+import Registration from './auth/Registration';
+import LandingPage from './pages/LandingPage';
+import Trending from './components/Trending';
+import 'bootstrap/dist/css/bootstrap.css';
+import Products from './pages/Products';
+import 'bootstrap/dist/js/bootstrap.js';
+import Contact from './pages/Contact';
+import NoPage from './pages/NoPage';
+import Login from './auth/Login';
+import Home from './pages/Home';
 
 // const isAuthenticated = () => {
 //   const token = localStorage.getItem('token');
@@ -27,7 +28,7 @@ import CategoriesDetails from './pages/CategoriesDetails';
 const App = () => {
   // Check if token exists in local storage
   const token = localStorage.getItem('token');
-
+   console.log("Toke" , token)
   return (
     <>
       <div className="App">
@@ -47,7 +48,7 @@ const App = () => {
               <Route exact path="/products" element={<Products />} />
               <Route exact path="/products/:id" element={<ProductDetails />} />
               <Route exact path="/categories" element={<Categories/>} />
-              <Route exact path="/categoriesdetails/:id" element={<CategoriesDetails/>} />
+              <Route exact path="/categrywoman/:id" element={<CategryWoman/>} />
               <Route exact path="/trending" element={<Trending/>} />
               <Route exact path="/trendingdetails/:id" element={<TrendingDetails/>} />
               <Route exact path="/contact" element={<Contact />} />

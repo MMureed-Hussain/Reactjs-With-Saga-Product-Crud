@@ -23,7 +23,7 @@ const Main = () => {
   return (
     <Row className='g-0'>
       {imageList.map((image, index) => (
-        <Col key={index} sm={6} md={4} lg={2} className="d-flex flex-column align-items-center">
+        <Col key={index} sm={6} md={4} lg={2} className={`d-flex flex-column align-items-center ${index === 3 || index === 4 ? 'mt-4' : ''}`}>
           <div className="d-flex flex-column align-items-center">
             <img src={image} alt={`Image ${index + 1}`} className="img-fluid" width={70} />
             <h5 className='text-center'>{descriptionList[index]}</h5>
