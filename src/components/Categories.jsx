@@ -32,14 +32,25 @@ const Categories = () => {
     },
   ];
 
+  // const handleDetailsProduct = (categoryId) => {
+  //   const category = categoryList.find(
+  //     (category) => category.id === categoryId
+  //   );
+  //   navigate(`/categrywoman/${categoryId}`, { state: { category } });
+  // };
+
   const handleDetailsProduct = (categoryId) => {
     const category = categoryList.find(
       (category) => category.id === categoryId
-    );
-    navigate(`/categrywoman/${categoryId}`, { state: { category } });
+    )
+    if (categoryId === 1) {
+      navigate(`/categrywoman/${categoryId}`, { state: { category: "Woman" } });
+    } else if (categoryId === 2) {
+      navigate(`/categryman/${categoryId}`, { state: { category: "Man" } });
+    }
   };
 
-  return (  
+  return (
     <>
       <div className="container mt-5">
         <h1 className="card text-center bg-success">Products Categories</h1>

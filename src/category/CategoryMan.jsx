@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import R, { useState } from "react";
 import { Col, Container, Row, Card, Button, Modal } from "react-bootstrap";
-
-export const CategryWoman = () => {
-  const womanList = [
+export const CategoryMan = () => {
+  const manList = [
     {
       id: 1,
       image: "/images/t1.jpeg",
@@ -63,38 +62,37 @@ export const CategryWoman = () => {
 
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  const handleWoman = (womanId) => {
-    const woman = womanList.find(
-      (woman) => woman.id === womanId
-    );
-    setSelectedProduct(woman);
+  const handleMan = (manId) => {
+    const man = manList.find((man) => man.id === manId);
+    setSelectedProduct(man);
   };
 
   const handleCloseModal = () => {
     setSelectedProduct(null);
   };
+
   return (
     <>
       <div className="trending-page mt-5">
         <Container>
-          <h1 className="card text-center bg-success">Woman Products</h1>
+          <h1 className="card text-center bg-success">Man Products</h1>
           <Row className="g-4">
-            {womanList.map((woman, index) => (
+            {manList.map((man, index) => (
               <Col key={index} md={6} lg={3}>
                 <Card className="h-100">
                   <Card.Img
                     variant="top"
-                    src={woman.image}
+                    src={man.image}
                     alt={`Product ${index + 1}`}
                   />
                   <Card.Body>
-                    <Card.Title>{woman.price}</Card.Title>
-                    <Card.Text>{woman.description}</Card.Text>
+                    <Card.Title>{man.price}</Card.Title>
+                    <Card.Text>{man.description}</Card.Text>
                     <Button
                       variant="primary"
-                      onClick={() => handleWoman(woman.id)}
+                      onClick={() => handleMan(man.id)}
                     >
-                      {woman.buttonText}
+                      {man.buttonText}
                     </Button>
                   </Card.Body>
                 </Card>

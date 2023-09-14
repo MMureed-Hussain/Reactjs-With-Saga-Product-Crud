@@ -4,6 +4,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import { CategryWoman } from './category/CategryWoman';
 import TrendingDetails from './pages/TrendingDetails';
 import ProductDetails from './pages/ProductDetails';
+import {CategoryMan} from './category/CategoryMan';
 import Categories from './components/Categories';
 import Layout from './components/layout/Layout';
 import Registration from './auth/Registration';
@@ -49,6 +50,7 @@ const App = () => {
               <Route exact path="/products/:id" element={<ProductDetails />} />
               <Route exact path="/categories" element={<Categories/>} />
               <Route exact path="/categrywoman/:id" element={<CategryWoman/>} />
+              <Route exact path="/categryman/:id" element={<CategoryMan/>} />
               <Route exact path="/trending" element={<Trending/>} />
               <Route exact path="/trendingdetails/:id" element={<TrendingDetails/>} />
               <Route exact path="/contact" element={<Contact />} />
