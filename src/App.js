@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 // import CategoryWoman from './pages/CategryWoman';
-import { CategryWoman } from './category/CategryWoman';
+import { CategoryWoman } from './category/CategoryWoman';
 import TrendingDetails from './pages/TrendingDetails';
 import ProductDetails from './pages/ProductDetails';
 import {CategoryMan} from './category/CategoryMan';
@@ -17,6 +17,7 @@ import Contact from './pages/Contact';
 import NoPage from './pages/NoPage';
 import Login from './auth/Login';
 import Home from './pages/Home';
+import { CategorySale } from './category/CategorySale';
 
 // const isAuthenticated = () => {
 //   const token = localStorage.getItem('token');
@@ -49,8 +50,9 @@ const App = () => {
               <Route exact path="/products" element={<Products />} />
               <Route exact path="/products/:id" element={<ProductDetails />} />
               <Route exact path="/categories" element={<Categories/>} />
-              <Route exact path="/categrywoman/:id" element={<CategryWoman/>} />
-              <Route exact path="/categryman/:id" element={<CategoryMan/>} />
+              <Route exact path="/categorywoman/:id" element={<CategoryWoman/>} />
+              <Route exact path="/categoryman/:id" element={<CategoryMan/>} />
+              <Route exact path="/categorysales/:id" element={<CategorySale/>} />
               <Route exact path="/trending" element={<Trending/>} />
               <Route exact path="/trendingdetails/:id" element={<TrendingDetails/>} />
               <Route exact path="/contact" element={<Contact />} />

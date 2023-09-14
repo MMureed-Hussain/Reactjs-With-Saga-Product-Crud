@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Col, Container, Row, Card, Button, Modal } from "react-bootstrap";
 
-export const CategryWoman = () => {
+export const CategoryWoman = () => {
   const womanList = [
     {
       id: 1,

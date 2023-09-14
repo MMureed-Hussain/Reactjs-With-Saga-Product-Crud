@@ -44,9 +44,11 @@ const Categories = () => {
       (category) => category.id === categoryId
     )
     if (categoryId === 1) {
-      navigate(`/categrywoman/${categoryId}`, { state: { category: "Woman" } });
+      navigate(`/categorywoman/${categoryId}`, { state: { category: "Woman" } });
     } else if (categoryId === 2) {
-      navigate(`/categryman/${categoryId}`, { state: { category: "Man" } });
+      navigate(`/categoryman/${categoryId}`, { state: { category: "Man" } });
+    }else if (categoryId === 3){
+      navigate(`/categorysales/${categoryId}`, { state: { category: "Sales" } });
     }
   };
 
