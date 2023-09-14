@@ -31,6 +31,34 @@ export const CategryWoman = () => {
       description: "Product Description 4",
       buttonText: "View Details",
     },
+    {
+      id: 5,
+      image: "/images/t1.jpeg",
+      price: "1",
+      description: "Product Description 1",
+      buttonText: "View Details",
+    },
+    {
+      id: 6,
+      image: "/images/t2.jpeg",
+      price: "2",
+      description: "Product Description 2",
+      buttonText: "View Details",
+    },
+    {
+      id: 7,
+      image: "/images/t3.jpeg",
+      price: "3",
+      description: "Product Description 3",
+      buttonText: "View Details",
+    },
+    {
+      id: 8,
+      image: "/images/mureed.jpg",
+      price: "4",
+      description: "Product Description 4",
+      buttonText: "View Details",
+    },
   ];
 
   const [selectedProduct, setSelectedProduct] = useState(null);
