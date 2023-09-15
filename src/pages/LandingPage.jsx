@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Footer } from "../components/Footer";
 
 const LandingPage = () => {
+  
   return (
     <>
       <div className="container">
@@ -39,9 +40,27 @@ const LandingPage = () => {
               </div>
             </div>
           </nav>
-          <div className="col-md-6 mt-5 text-center">
-            <h2>Welcome to Our Project</h2>
-            <p>Project details and information go here.</p>
+          <div
+            className="col-md-6 mt-2"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontFamily: "sans-serif",
+            }}
+          >
+            <div className="card">
+              <div className="card-title text-center fs-3">
+                Welcome to Our Project<hr></hr>
+              </div>
+              <div className="card-body text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi repudiandae
+                consequuntur voluptatum laborum numquam blanditiis harum
+                quisquam eius sed odit fugiat iusto fuga praesentium optio,
+                eaque rerum! Provident similique accusantium nemo autem.
+              </div>
+            </div>
           </div>
           <div className="col-md-6 mt-5 mb-5">
             <img
