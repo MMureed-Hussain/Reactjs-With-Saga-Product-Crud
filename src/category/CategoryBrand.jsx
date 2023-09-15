@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { Col, Container, Row, Card, Button, Modal } from "react-bootstrap";
-
-export const CategorySale = () => {
-
+export const CategoryBrand = () => {
     const saleList = [
         {
           id: 1,
@@ -76,7 +74,7 @@ export const CategorySale = () => {
     <>
       <div className="trending-page mt-5">
         <Container>
-          <h3 className="card text-center" style={{ backgroundColor: '#28a745', color: '#fff', fontFamily: "'Your Font', sans-serif" }}>Sales Products</h3>
+          <h3 className="card text-center" style={{ backgroundColor: '#28a745', color: '#fff', fontFamily: "'Your Font', sans-serif" }}>Brand Products</h3>
           <Row className="g-4">
             {saleList.map((sale, index) => (
               <Col key={index} md={6} lg={3}>

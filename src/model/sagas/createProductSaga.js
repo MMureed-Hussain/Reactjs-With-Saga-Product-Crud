@@ -31,7 +31,7 @@ function* createProductSaga(action) {
   try {
     const { name, price} = action.payload.formData;
 
-    const response = yield call(axios.post,'http://localhost:8000/todo', {
+    const response = yield call(axios.post,'http://localhost:8080/todo', {
       name,
       price,
     });

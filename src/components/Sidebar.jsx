@@ -1,7 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 function Sidebar() {
+  const navigate = useNavigate();
+  const [isLoggedin, setIsLoggedin] = useState(false);
+  const logout = (e) => {
+    e.preventDefault();
+    console.log("Logout");
+    // CLEAR DATA FROM STORAGE
+    localStorage.clear();
+    sessionStorage.clear();
+    setIsLoggedin(false);
+    navigate("/login");
+  };
+
+
   return (
     <>
       {/* Sidebar (Mobile View) */}
@@ -48,6 +61,11 @@ function Sidebar() {
                   Contact
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="#" onClickCapture={logout}>
+                  Logout
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>
@@ -84,6 +102,11 @@ function Sidebar() {
             <li className="nav-item">
               <Link className="nav-link custom-link" to="contact">
                 Contact
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="#" onClickCapture={logout}>
+                Logout
               </Link>
             </li>
           </ul>

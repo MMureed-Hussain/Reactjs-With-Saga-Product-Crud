@@ -11,8 +11,8 @@ const Contact = () => {
   return (
     <Container>
     <Row>
-      <Col className=' text-center m-5'>
-        <h1 className='fs-4'>Contact Us</h1>
+      <Col className=' text-center m-5'>        
+        <h3 className="card text-center" style={{ backgroundColor: '#28a745', color: '#fff', fontFamily: "'Your Font', sans-serif" }}>Contact Us</h3>
         <p className='m-3 p-3'>
           For any inquiries or assistance related to buying clothes, please feel free to reach out to us via WhatsApp.
           Our team is here to help you find the perfect outfits and answer any questions you may have.

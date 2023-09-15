@@ -18,6 +18,7 @@ import NoPage from './pages/NoPage';
 import Login from './auth/Login';
 import Home from './pages/Home';
 import { CategorySale } from './category/CategorySale';
+import { CategoryBrand } from './category/CategoryBrand';
 
 // const isAuthenticated = () => {
 //   const token = localStorage.getItem('token');
@@ -53,6 +54,7 @@ const App = () => {
               <Route exact path="/categorywoman/:id" element={<CategoryWoman/>} />
               <Route exact path="/categoryman/:id" element={<CategoryMan/>} />
               <Route exact path="/categorysales/:id" element={<CategorySale/>} />
+              <Route exact path="/categorybrands/:id" element={<CategoryBrand/>} />
               <Route exact path="/trending" element={<Trending/>} />
               <Route exact path="/trendingdetails/:id" element={<TrendingDetails/>} />
               <Route exact path="/contact" element={<Contact />} />

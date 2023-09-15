@@ -7,7 +7,7 @@ function* deleteProductSaga(action) {
   const id = action.payload;
 
   try {
-    yield call(axios.delete,`http://localhost:8000/todo/${id}`);
+    yield call(axios.delete,`http://localhost:8080/todo/${id}`);
     yield put(deleteProductActions.deleteProductSuccess(id));//
     toast.success('Product deleted successfully');
     alert('Product deleted successfully');

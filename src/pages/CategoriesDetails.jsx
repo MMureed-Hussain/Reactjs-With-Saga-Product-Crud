@@ -10,6 +10,7 @@ const CategoriesDetails = () => {
     <>
       <div className="container mt-5">
       <h1 className="card text-center bg-success">Categories Product Details</h1>
+      <h3 className="card text-center" style={{ backgroundColor: '#28a745', color: '#fff', fontFamily: "'Your Font', sans-serif" }}>Categories Product Details</h3>
         <div className="card text-center">
           <img
             src={category.image}

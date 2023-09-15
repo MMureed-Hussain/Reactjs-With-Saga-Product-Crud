@@ -19,7 +19,7 @@ const Products = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [show, setShow] = useState(false);
   //form start json server
-  //npx json-server --watch db.json --port 8000
+  //npx json-server --watch db.json --port 8080
   const dispatch = useDispatch();
   const { loading, error, products } = useSelector((state) => state.products);
   const { name, price } = formData;
@@ -49,21 +49,6 @@ const Products = () => {
     });
     dispatch(fetchProducts()); // Fetch products after creating or updating
   };
-
-  // const handleUpdateProduct = async (productId) => {
-  //   const selectedProduct = products.find(
-  //     (product) => product.id === productId
-  //   );
-  //   if (selectedProduct) {
-  //     setFormData({
-  //       name: selectedProduct.name,
-  //       price: selectedProduct.price,
-  //     });
-  //     setIsUpdateMode(true);
-  //     setSelectedProductId(productId);
-  //   }
-  //   // window.location.reload();
-  // };
 
   const handleUpdateProduct = (productId) => {
     const selectedProduct = products.find(
@@ -106,11 +91,12 @@ const Products = () => {
     const productName = product.name && product.name.toLowerCase();
     return productName && productName.includes(searchTerm.toLowerCase());
   });
-  
+
   // let table = new DataTable('#products-table');
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   return (
     <>
       <div className="container mt-5">
@@ -235,52 +221,6 @@ const Products = () => {
               </Modal.Footer>
             </Modal>
           </div>
-
-          {/* <div
-            className="col-md-4"
-            // style={{backgroundImage:"URL(/images/slider1.jpg)", width:"300px"}}
-          >
-            <h3 className="text-center">Create Product Form</h3>
-            <form className="mt-5" onSubmit={handleSubmit}>
-              <div className="mb-3">
-                <label htmlFor="name" className="form-label fs-5">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={isUpdateMode ? formData.name : name}
-                  onChange={handleChange}
-                  className="form-control"
-                  placeholder="Enter your name"
-                  required
-                />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label fs-5">
-                  Price
-                </label>
-                <input
-                  type="number"
-                  id="number"
-                  name="price"
-                  value={isUpdateMode ? formData.price : price}
-                  onChange={handleChange}
-                  className="form-control"
-                  placeholder="Enter your price"
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="btn btn-success "
-                disabled={loading}
-              >
-                {loading ? "Creating..." : "Create"}
-              </button>
-            </form>
-          </div> */}
         </div>
       </div>
     </>

@@ -6,7 +6,7 @@ import { fetchProductFailure, fetchProductRequest, fetchProductSuccess } from '.
 function* fetchProductSaga(action) {
   try {
     const { id } = action.payload;
-    const response = yield call(axios.get, `http://localhost:8000/todo/${id}`);
+    const response = yield call(axios.get, `http://localhost:8080/todo/${id}`);
     const product = response.data;
     yield put(fetchProductSuccess(product));
     console.log("Product details saga", product)

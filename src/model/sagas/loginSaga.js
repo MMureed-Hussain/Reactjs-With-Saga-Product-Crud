@@ -16,9 +16,9 @@ function* loginUserSaga(action) {
     localStorage.setItem("token", response.data.access_token);
     toast('Loging successful');
     yield put(loginSuccess());
-    yield call(navigate, '/home');
     alert("Login successful");
     console.log(response.data);
+    yield call(navigate, '/');
   } catch (error) {
     if (error.response) {
       // Server responded with a status code outside the range of 2xx

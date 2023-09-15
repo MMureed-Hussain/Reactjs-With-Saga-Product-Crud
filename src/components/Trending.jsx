@@ -49,7 +49,7 @@ const Trending = () => {
     <>
       <div className="trending-page mt-5">
         <Container>
-          <h1 className="card text-center bg-success">Trending Products</h1>
+        <h3 className="card text-center" style={{ backgroundColor: '#28a745', color: '#fff', fontFamily: "'Your Font', sans-serif" }}>Trending Products</h3>
           <Row className="g-4">
             {trendingList.map((trending, index) => (
               <Col key={index} md={6} lg={3}>

@@ -49,13 +49,15 @@ const Categories = () => {
       navigate(`/categoryman/${categoryId}`, { state: { category: "Man" } });
     }else if (categoryId === 3){
       navigate(`/categorysales/${categoryId}`, { state: { category: "Sales" } });
+    }else if (categoryId === 4){
+      navigate(`/categorybrands/${categoryId}`, { state: { category: "Brands" } });
     }
   };
 
   return (
     <>
       <div className="container mt-5">
-        <h1 className="card text-center bg-success">Products Categories</h1>
+        <h3 className="card text-center" style={{ backgroundColor: '#28a745', color: '#fff', fontFamily: "'Your Font', sans-serif" }}>Products Categories</h3>
         <Row className="g-4">
           {categoryList.map((category, index) => (
             <Col

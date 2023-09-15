@@ -75,7 +75,7 @@ export const CategoryMan = () => {
     <>
       <div className="trending-page mt-5">
         <Container>
-          <h1 className="card text-center bg-success">Man Products</h1>
+          <h3 className="card text-center" style={{ backgroundColor: '#28a745', color: '#fff', fontFamily: "'Your Font', sans-serif" }}>Man Products</h3>
           <Row className="g-4">
             {manList.map((man, index) => (
               <Col key={index} md={6} lg={3}>

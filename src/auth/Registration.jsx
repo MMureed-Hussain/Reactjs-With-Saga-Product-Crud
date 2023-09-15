@@ -19,7 +19,7 @@
 
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
-  
+
 //     try {
 //       const response = await axios.post("http://localhost:8000/api/register", {
 //         name,
@@ -42,10 +42,9 @@
 //         // Something else happened while setting up the request
 //         alert("An error occurred. Please try again later.");
 //       }
-      
+
 //     }
 //   };
-  
 
 //   return (
 //     <div className="container">
@@ -120,19 +119,19 @@
 
 // Registration.js
 
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import {registerUser} from '../model/actions/registrationActions'
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { registerUser } from "../model/actions/registrationActions";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 const Registration = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-   name: '',
-    email: '',
-    password: '',
+    name: "",
+    email: "",
+    password: "",
   });
 
   const dispatch = useDispatch();
@@ -147,17 +146,23 @@ const Registration = () => {
     e.preventDefault();
     dispatch(registerUser({ formData, navigate }));
   };
-  
+
   return (
     <div className="container">
-      <div className="row">
-        <div className="col-md-6">
-          <h2>Registration</h2>
+      <div className="row mt-5">
+        <div
+          className="col-md-6"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="name" className="form-label">
                 Name
-                </label>
+              </label>
               <input
                 type="text"
                 id="name"
@@ -168,8 +173,6 @@ const Registration = () => {
                 placeholder="Enter your name"
                 required
               />
-             
-             
             </div>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
@@ -201,8 +204,12 @@ const Registration = () => {
                 required
               />
             </div>
-            <button type="submit" className="btn btn-primary" disabled={loading}>
-              {loading ? 'Registering...' : 'Register'}
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={loading}
+            >
+              {loading ? "Registering..." : "Register"}
             </button>
           </form>
         </div>
@@ -211,7 +218,7 @@ const Registration = () => {
             src="/images/register.jpg"
             alt="Registration Image"
             className="img-fluid"
-            style={{ height: '100%', width: '100%' }}
+            style={{ height: "100%", width: "100%" }}
           />
         </div>
       </div>

@@ -5,7 +5,7 @@ import { getFailure, getStart, getSuccess } from '../reducers/getProductReducer'
 
 function* getProductSaga() {
   try {
-    const response = yield call(axios.get,'http://localhost:8000/todo');
+    const response = yield call(axios.get,'http://localhost:8080/todo');
 
     // Assuming the response.data contains the fetched products
     const products = response.data;
