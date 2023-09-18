@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 // import CategoryWoman from './pages/CategryWoman';
 import { CategoryWoman } from './category/CategoryWoman';
-import TrendingDetails from './pages/TrendingDetails';
+// import TrendingDetails from './pages/TrendingDetails';
 import ProductDetails from './pages/ProductDetails';
 import {CategoryMan} from './category/CategoryMan';
 import Categories from './components/Categories';
@@ -56,7 +56,6 @@ const App = () => {
               <Route exact path="/categorysales/:id" element={<CategorySale/>} />
               <Route exact path="/categorybrands/:id" element={<CategoryBrand/>} />
               <Route exact path="/trending" element={<Trending/>} />
-              <Route exact path="/trendingdetails/:id" element={<TrendingDetails/>} />
               <Route exact path="/contact" element={<Contact />} />
               <Route exact path="/no-page" element={<NoPage />} />
               <Route path="*" element={<Navigate to="/no-page" />} />

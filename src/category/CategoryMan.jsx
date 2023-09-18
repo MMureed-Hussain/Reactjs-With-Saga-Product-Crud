@@ -1,65 +1,8 @@
 import R, { useState } from "react";
 import { Col, Container, Row, Card, Button, Modal } from "react-bootstrap";
+import { manList } from "../datalists/brandList";
 export const CategoryMan = () => {
-  const manList = [
-    {
-      id: 1,
-      image: "/images/t1.jpeg",
-      price: "1",
-      description: "Product Description 1",
-      buttonText: "View Details",
-    },
-    {
-      id: 2,
-      image: "/images/t2.jpeg",
-      price: "2",
-      description: "Product Description 2",
-      buttonText: "View Details",
-    },
-    {
-      id: 3,
-      image: "/images/t3.jpeg",
-      price: "3",
-      description: "Product Description 3",
-      buttonText: "View Details",
-    },
-    {
-      id: 4,
-      image: "/images/mureed.jpg",
-      price: "4",
-      description: "Product Description 4",
-      buttonText: "View Details",
-    },
-    {
-      id: 5,
-      image: "/images/t1.jpeg",
-      price: "1",
-      description: "Product Description 1",
-      buttonText: "View Details",
-    },
-    {
-      id: 6,
-      image: "/images/t2.jpeg",
-      price: "2",
-      description: "Product Description 2",
-      buttonText: "View Details",
-    },
-    {
-      id: 7,
-      image: "/images/t3.jpeg",
-      price: "3",
-      description: "Product Description 3",
-      buttonText: "View Details",
-    },
-    {
-      id: 8,
-      image: "/images/mureed.jpg",
-      price: "4",
-      description: "Product Description 4",
-      buttonText: "View Details",
-    },
-  ];
-
+ 
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const handleMan = (manId) => {
@@ -75,9 +18,18 @@ export const CategoryMan = () => {
     <>
       <div className="trending-page mt-5">
         <Container>
-          <h3 className="card text-center" style={{ backgroundColor: '#28a745', color: '#fff', fontFamily: "'Your Font', sans-serif" }}>Man Products</h3>
+          <h3
+            className="card text-center"
+            style={{
+              backgroundColor: "#28a745",
+              color: "#fff",
+              fontFamily: "'Your Font', sans-serif",
+            }}
+          >
+            Man Products
+          </h3>
           <Row className="g-4">
-            {manList.map((man, index) => (
+            {manList?.map((man, index) => (
               <Col key={index} md={6} lg={3}>
                 <Card className="h-100">
                   <Card.Img
@@ -86,12 +38,12 @@ export const CategoryMan = () => {
                     alt={`Product ${index + 1}`}
                   />
                   <Card.Body>
-                    <Card.Title>{man.price}</Card.Title>
-                    <Card.Text>{man.description}</Card.Text>
-                    <Button
-                      variant="primary"
-                      onClick={() => handleMan(man.id)}
-                    >
+                    <Card.Title>
+                      {" "}
+                      <b>Price : </b>
+                      {man.price}
+                    </Card.Title>
+                    <Button variant="primary" onClick={() => handleMan(man.id)}>
                       {man.buttonText}
                     </Button>
                   </Card.Body>
@@ -115,8 +67,14 @@ export const CategoryMan = () => {
                 alt={selectedProduct.description}
                 className="img-fluid"
               />
-              <p>Price: {selectedProduct.price}</p>
-              <p>Description: {selectedProduct.description}</p>
+              <div className="card mt-3">
+                <div className="card title">
+                <b>Price : </b>{selectedProduct.price}
+                </div>
+                <div className="card body">
+                <b>Description : </b>{selectedProduct.description}
+                </div>
+              </div>
             </div>
           )}
         </Modal.Body>

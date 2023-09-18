@@ -1,38 +1,8 @@
 import React, { useState } from "react";
 import { Col, Container, Row, Card, Button, Modal } from "react-bootstrap";
+import {trendingList} from '../datalists/brandList'
 
 const Trending = () => {
-
-  const trendingList = [
-    {
-      id: 1,
-      image: "/images/t1.jpeg",
-      price: "1",
-      description: "Product Description 1",
-      buttonText: "View Details",
-    },
-    {
-      id: 2,
-      image: "/images/t2.jpeg",
-      price: "2",
-      description: "Product Description 2",
-      buttonText: "View Details",
-    },
-    {
-      id: 3,
-      image: "/images/t3.jpeg",
-      price: "3",
-      description: "Product Description 3",
-      buttonText: "View Details",
-    },
-    {
-      id: 4,
-      image: "/images/mureed.jpg",
-      price: "4",
-      description: "Product Description 4",
-      buttonText: "View Details",
-    },
-  ];
 
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -51,7 +21,7 @@ const Trending = () => {
         <Container>
         <h3 className="card text-center" style={{ backgroundColor: '#28a745', color: '#fff', fontFamily: "'Your Font', sans-serif" }}>Trending Products</h3>
           <Row className="g-4">
-            {trendingList.map((trending, index) => (
+            {trendingList?.map((trending, index) => (
               <Col key={index} md={6} lg={3}>
                 <Card className="h-100">
                   <Card.Img

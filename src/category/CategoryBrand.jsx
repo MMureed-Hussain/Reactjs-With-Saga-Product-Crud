@@ -1,97 +1,51 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import { Col, Container, Row, Card, Button, Modal } from "react-bootstrap";
+import { brandList } from "../datalists/brandList";
+
 export const CategoryBrand = () => {
-    const saleList = [
-        {
-          id: 1,
-          image: "/images/t1.jpeg",
-          price: "1",
-          description: "Product Description 1",
-          buttonText: "View Details",
-        },
-        {
-          id: 2,
-          image: "/images/t2.jpeg",
-          price: "2",
-          description: "Product Description 2",
-          buttonText: "View Details",
-        },
-        {
-          id: 3,
-          image: "/images/t3.jpeg",
-          price: "3",
-          description: "Product Description 3",
-          buttonText: "View Details",
-        },
-        {
-          id: 4,
-          image: "/images/mureed.jpg",
-          price: "4",
-          description: "Product Description 4",
-          buttonText: "View Details",
-        },
-        {
-          id: 5,
-          image: "/images/t1.jpeg",
-          price: "1",
-          description: "Product Description 1",
-          buttonText: "View Details",
-        },
-        {
-          id: 6,
-          image: "/images/t2.jpeg",
-          price: "2",
-          description: "Product Description 2",
-          buttonText: "View Details",
-        },
-        {
-          id: 7,
-          image: "/images/t3.jpeg",
-          price: "3",
-          description: "Product Description 3",
-          buttonText: "View Details",
-        },
-        {
-          id: 8,
-          image: "/images/mureed.jpg",
-          price: "4",
-          description: "Product Description 4",
-          buttonText: "View Details",
-        },
-      ];
-    
-      const [selectedProduct, setSelectedProduct] = useState(null);
-    
-      const handleSale = (saleId) => {
-        const sale = saleList.find((sale) => sale.id === saleId);
-        setSelectedProduct(sale);
-      };
-    
-      const handleCloseModal = () => {
-        setSelectedProduct(null);
-      };
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const handleSale = (brandId) => {
+    const brand = brandList.find((brand) => brand.id === brandId);
+    setSelectedProduct(brand);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedProduct(null);
+  };
   return (
     <>
       <div className="trending-page mt-5">
         <Container>
-          <h3 className="card text-center" style={{ backgroundColor: '#28a745', color: '#fff', fontFamily: "'Your Font', sans-serif" }}>Brand Products</h3>
+          <h3
+            className="card text-center"
+            style={{
+              backgroundColor: "#28a745",
+              color: "#fff",
+              fontFamily: "'Your Font', sans-serif",
+            }}
+          >
+            Brand Products
+          </h3>
           <Row className="g-4">
-            {saleList.map((sale, index) => (
+            {brandList?.map((brand, index) => (
               <Col key={index} md={6} lg={3}>
                 <Card className="h-100">
                   <Card.Img
                     variant="top"
-                    src={sale.image}
+                    src={brand.image}
                     alt={`Product ${index + 1}`}
                   />
                   <Card.Body>
-                    <Card.Title>{sale.price}</Card.Title>
-                    <Card.Text>{sale.description}</Card.Text>
+                    <Card.Title>
+                      <b>Price :</b>
+                      {brand.price}
+                    </Card.Title>
                     <Button
                       variant="primary"
-                      onClick={() => handleSale(sale.id)}
+                      onClick={() => handleSale(brand.id)}
                     >
-                      {sale.buttonText}
+                      {brand.buttonText}
                     </Button>
                   </Card.Body>
                 </Card>
@@ -104,7 +58,7 @@ export const CategoryBrand = () => {
       {/* Modal to display the selected product */}
       <Modal show={!!selectedProduct} onHide={handleCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Product Details</Modal.Title>
+          <Modal.Title className="mx-5">Product Details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {selectedProduct && (
@@ -114,8 +68,14 @@ export const CategoryBrand = () => {
                 alt={selectedProduct.description}
                 className="img-fluid"
               />
-              <p>Price: {selectedProduct.price}</p>
-              <p>Description: {selectedProduct.description}</p>
+              <div className="card mt-3">
+                <div className="card-title">
+                  <b>Price : </b> {selectedProduct.price}
+                </div>
+                <div className="card-text">
+                  <b>Description : </b> {selectedProduct.description}
+                </div>
+              </div>
             </div>
           )}
         </Modal.Body>
@@ -126,5 +86,5 @@ export const CategoryBrand = () => {
         </Modal.Footer>
       </Modal>
     </>
-  )
-}
+  );
+};
