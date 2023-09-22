@@ -23,7 +23,7 @@ function* loginUserSaga(action) {
     if (error.response) {
       // Server responded with a status code outside the range of 2xx
       alert(error.response.data.message);
-      yield call(navigate, '/');
+      yield call(navigate, '/login');
     } else if (error.request) {
       // Request was made but no response received (server is off)
       alert('Network error. Please try again later.');

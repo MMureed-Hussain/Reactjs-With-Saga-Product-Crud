@@ -1,23 +1,17 @@
-import React, { useState } from "react";
+import { Button } from "react-bootstrap";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function Sidebar() {
   const navigate = useNavigate();
-  const [isLoggedin, setIsLoggedin] = useState(false);
   const logout = (e) => {
-    e.preventDefault();
-    console.log("Logout");
-    // CLEAR DATA FROM STORAGE
+    e.preventDefault(); // Prevent the default link behavior
     localStorage.clear();
-    sessionStorage.clear();
-    setIsLoggedin(false);
     navigate("/login");
   };
 
-
   return (
     <>
-      {/* Sidebar (Mobile View) */}
       <div className="d-md-none">
         <nav className="navbar navbar-expand-md navbar-dark bg-dark">
           <Link className="navbar-brand" to="/">
@@ -62,7 +56,7 @@ function Sidebar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="#" onClickCapture={logout}>
+                <Link className="nav-link" to="/login" onClick={logout}>
                   Logout
                 </Link>
               </li>
@@ -105,9 +99,9 @@ function Sidebar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="#" onClickCapture={logout}>
+              <Button className="nav-link" to="/login" onClick={logout}>
                 Logout
-              </Link>
+              </Button>
             </li>
           </ul>
         </div>
