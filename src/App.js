@@ -20,6 +20,8 @@ import Home from "./pages/Home";
 import { CategorySale } from "./category/CategorySale";
 import { CategoryBrand } from "./category/CategoryBrand";
 import { useAuth } from "./auth/useAuth";
+import { Passwordreset } from "./auth/Passwordreset";
+
 
 const App = () => {
   // Check if token exists in local storage
@@ -34,6 +36,7 @@ const App = () => {
             <Route exact path="/" element={<LandingPage />} />
             <Route exact path="/registration" element={<Registration />} />
             <Route exact path="/login" element={<Login />} />
+            <Route exact path="/resetpassword" element={<Passwordreset />} />
             <Route exact path="/no-page" element={<NoPage />} />
             <Route path="*" element={<Navigate to="/no-page" />} />
           </Routes>

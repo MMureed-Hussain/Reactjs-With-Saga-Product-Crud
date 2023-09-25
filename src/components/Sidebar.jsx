@@ -12,7 +12,7 @@ function Sidebar() {
 
   return (
     <>
-      <div className="d-md-none">
+      <div className="d-md-none mt-2">
         <nav className="navbar navbar-expand-md navbar-dark bg-dark">
           <Link className="navbar-brand" to="/">
             <i className=" fas fa-user mx-4"></i>
@@ -65,7 +65,7 @@ function Sidebar() {
         </nav>
       </div>
       {/* Sidebar (Desktop View) */}
-      <div className="d-none d-md-block bg-light mt-5 vh-100 fs-5">
+      <div className="d-none d-md-block bg-light mt-2 vh-100 fs-5">
         {/* <img className="m-2" src="#" alt="D" />{" "} */}
         <i className="fas fa-user m-2"></i>{" "}
         <Link className="navbar-brand m-4" to="/">

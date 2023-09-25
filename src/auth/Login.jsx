@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../model/actions/loginActions";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Login = () => {
@@ -114,6 +114,7 @@ const Login = () => {
                   placeholder="Enter your password"
                   required
                 />
+                <Link to="/resetpassword">forget password</Link>
               </div>
               <button
                 type="submit"
